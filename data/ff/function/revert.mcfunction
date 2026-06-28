@@ -1,0 +1,1 @@
+#$execute as @e[tag=ff.display,type=text_display] at @s run setblock ~ ~ ~ $(a)

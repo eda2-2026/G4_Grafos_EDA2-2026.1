@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": "Feito por Mateus e Davi",
+    "min_format": [
+      101,
+      1
+    ],
+    "max_format": 101
+  }
+}
