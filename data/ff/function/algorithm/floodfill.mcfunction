@@ -4,6 +4,7 @@ $execute unless block ~ ~ ~ $(b) run return fail
 # SENÃO:
 
 ## Adiciona uma marcação
+scoreboard players add step ff 1
 execute if score markings ff matches 1 run function ff:display/spawn_marking
 
 # Substitui pelo bloco A
