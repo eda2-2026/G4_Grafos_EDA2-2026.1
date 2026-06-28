@@ -5,60 +5,42 @@ O objetivo deste projeto é implementar o algoritmo clássico de **Flood Fill** 
 
 ## Características e Arquitetura
 
-* **Recursão Espacial 3D (6 Direções):** O algoritmo de inundação propaga-se de forma tridimensional, verificando as 6 direções cardinais e espaciais: **Leste (`~1 ~ ~`), Oeste (`~-1 ~ ~`), Sul (`~ ~ ~1`), Norte (`~ ~ ~-1`), Cima (`~ ~1 ~`) e Baixo (`~ ~-1 ~`)** a partir do ponto de partida.
-* **Macros e Storage do Minecraft:** Utiliza recursos avançados de NBT Storage (`floodfill`) e comandos de Macro (`$`) para parametrizar dinamicamente a execução dos comandos `fill` e `execute positioned`.
-* **Detecção Automática de Blocos:** O sistema lê em tempo real os itens segurados pelo jogador para definir os parâmetros do algoritmo:
-  * **Mão Secundária (Offhand):** Bloco alvo a ser substituído.
-  * **Mão Principal (Mainhand):** Bloco novo que preencherá o espaço.
-* **Visualização Dinâmica de Passos:** Durante a propagação, entidades de `text_display` são sumonadas na posição exata de cada bloco substituído, exibindo o número do passo de execução atual. Isso fornece um feedback visual imediato da ordem de processamento do algoritmo.
-
-## Divisão de Responsabilidades
-
-O desenvolvimento do Datapack foi dividido de forma colaborativa da seguinte forma:
-
-### Davi
-* Estruturação básica do datapack (definição do `pack.mcmeta`, tags e carregamento básico).
-* Implementação da lógica de recursividade tridimensional em 6 direções no `floodfill.mcfunction`.
-* Desenvolvimento do motor de macros para execução dinâmica do comando de preenchimento.
-
-### Mateus
-* Implementação do sistema de leitura dinâmica dos blocos na mão do jogador (`SelectedItem` e `equipment.offhand`).
-* Criação do sistema de telemetria visual com as entidades `text_display` (`text.mcfunction`).
-* Lógica de limpeza (`init.mcfunction`) e gerenciamento do contador de passos no Scoreboard.
-
-### Responsabilidade Compartilhada
-* Modelagem conceitual da conversão do algoritmo de Flood Fill para o sistema de comandos do Minecraft.
-* Refatoração de funções e otimização para evitar travamentos devido ao limite de recursão nativo do jogo.
+* **Recursão Espacial 3D (6 Direções):** O algoritmo de inundação propaga-se de forma tridimensional, verificando as 6 direções cardinais e espaciais: **Leste, Oeste, Sul, Norte, Zênite e Nadir** a partir do ponto de partida.
+* **Marcação de Passos:** Mostra o número do passo em cada bloco afetado, permitindo visualizar a ordem em que o algoritmo se espalhou.
 
 ## 🕹️ Como Executar
 
 A aplicação roda diretamente no motor do Minecraft Vanilla sem a necessidade de mods.
 
-**Pré-requisitos:** Minecraft Java Edition na versão **1.20.3** ou **1.20.4** (que suportam a versão do pack **26** / `min_format` 26.2).
+**Pré-requisitos:** Minecraft: Java Edition na versão **26.2**.
+
+## 📦 Dependências
+
+O projeto utiliza a seguinte dependência inclusa:
+* **[BlockState Datapack](https://github.com/Triton365/BlockState):** Serve para obter o ID do bloco na coordenada desejada de forma eficiente por meio de uma árvore de busca binária contendo todos os blocos e estados mapeados.
 
 ### Passo 1: Instalar o Datapack no seu Mundo
 1. Com o Minecraft fechado ou no menu principal, acesse a pasta da sua instância de jogo.
 2. Localize a pasta do seu mundo de testes: `.minecraft/saves/<NOME_DO_MUNDO>/datapacks/`.
 3. Mova a pasta `floodfill` (este repositório) para dentro da pasta `datapacks/`.
 4. Entre no mundo no Minecraft.
-5. Se o mundo já estava aberto, digite o comando no chat e pressione Enter:
-   ```mcfunction
-   /reload
-   ```
-   *Se o carregamento ocorrer com sucesso, a tabela de scoreboards `ff` será inicializada automaticamente.*
+5. Se o mundo já estava aberto, digite o comando `/reload` no chat e pressione Enter.
 
 ### Passo 2: Configurar o Preenchimento
-1. Escolha o bloco que deseja substituir e coloque-o na sua **Mão Secundária (tecla F)** (Ex: *Lapis Lazuli Block*).
-2. Escolha o bloco com o qual deseja preencher a área e coloque-o na sua **Mão Principal (Mainhand)** (Ex: *Gold Block*).
-3. Construa uma estrutura fechada ou uma linha de blocos do tipo que está na sua mão secundária.
+1. Escolha o bloco com o qual deseja preencher a área e coloque-o na sua mão principal. Caso queira substituir os blocos por ar, segure o item **Vazio Estrutural** (`structure_void`).
+
+2. **(Opcional)** Ajuste as configurações do datapack via scoreboard:
+   * **Marcações de Passos:** Mostra os números dos passos nos blocos afetados.
+     * Habilitar: `/scoreboard players set markings ff 1`
+     * Desabilitar: `/scoreboard players set markings ff 0`
+   * **Animação:** Preenche a área de forma animada seguindo a ordem de descoberta (requer `markings` ativo).
+     * Habilitar: `/scoreboard players set animation ff 1`
+     * Desabilitar: `/scoreboard players set animation ff 0`
 
 ### Passo 3: Executar o Algoritmo
-1. Fique com o corpo posicionado sobre ou encostado no bloco inicial da estrutura que quer preencher.
+1. Fique posicionado exatamente em cima do bloco inicial da estrutura que quer preencher.
 2. Digite o seguinte comando no chat:
    ```mcfunction
-   /function ff:init
+   /execute positioned ~ ~-1 ~ run function ff:algorithm/init
    ```
-3. O algoritmo executará instantaneamente, transformando os blocos da estrutura e mostrando os números com a ordem exata de preenchimento de cada bloco!
-
----
-Desenvolvido com 💻 e 🟥 para a disciplina de Estruturas de Dados 2 (EDA2) da UnB.
+3. O algoritmo executará, substituindo os blocos de forma animada e mostrando visualmente a ordem de preenchimento!
