@@ -26,6 +26,10 @@ Tanto o algoritmo de BFS quanto o Flood Fill geram representações visuais na t
 
 ---
 
+## 📚 Algoritmos Implementados
+
+*(Clique nas abas abaixo para expandir a documentação, arquitetura e instruções de uso de cada algoritmo)*
+
 <details>
 <summary><b><big><big> 🌊 Algoritmo Flood Fill</big></big></b></summary>
 <br>
