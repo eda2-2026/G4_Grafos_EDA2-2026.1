@@ -7,7 +7,7 @@ Este projeto é um datapack de Minecraft desenvolvido em dupla para a disciplina
 ## 🕹️ Instalação e Requisitos Globais
 
 A aplicação roda diretamente no motor do Minecraft Vanilla sem a necessidade de mods.
-**Pré-requisitos:** Minecraft: Java Edition na versão **1.20+**.
+**Pré-requisitos:** Minecraft: Java Edition na versão **26.2**.
 
 ### 📦 Dependências
 O projeto utiliza a seguinte dependência inclusa (Não precisa instalar):
