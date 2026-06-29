@@ -2,11 +2,18 @@
 
 Este projeto é um datapack de Minecraft desenvolvido em dupla para a disciplina de Estruturas de Dados e Algoritmos 2 (EDA2). Ele implementa algoritmos clássicos de grafos de forma visual e interativa no ambiente tridimensional e bidimensional do jogo, demonstrando conceitos fundamentais de grafos através de gamificação.
 
+### 👥 Divisão de Responsabilidades
+* **Mateus:** Responsável principal pelo algoritmo **Flood Fill**.
+* **Davi:** Responsável principal pelo algoritmo **Busca em Largura (BFS)**.
+
+*Embora cada um tenha focado no desenvolvimento de uma parte específica do projeto, ambos se ajudaram mutuamente durante todo o processo no planejamento, integração e testes das funcionalidades.*
+
 ---
 
 ## 🕹️ Instalação e Requisitos Globais
 
 A aplicação roda diretamente no motor do Minecraft Vanilla sem a necessidade de mods.
+
 **Pré-requisitos:** Minecraft: Java Edition na versão **26.2**.
 
 ### 📦 Dependências
@@ -38,19 +45,19 @@ O objetivo deste algoritmo é implementar o clássico **Flood Fill** (Preenchime
 
 ## Como Configurar e Executar
 
-1. **Preparação:** Segure na mão do personagem o bloco com o qual deseja preencher a área. Caso queira apagar os blocos (substituir por ar), segure o item **Vazio Estrutural** (`structure_void`).
-2. **(Opcional) Configurações Visuais:** Você pode ajustar o datapack via scoreboard:
-   * **Marcações de Passos:** Mostra os números dos passos nos blocos afetados.
-     * Habilitar: `/scoreboard players set markings ff 1`
-     * Desabilitar: `/scoreboard players set markings ff 0`
-   * **Animação:** Preenche a área de forma animada seguindo a ordem de descoberta (requer `markings` ativo).
-     * Habilitar: `/scoreboard players set animation ff 1`
-     * Desabilitar: `/scoreboard players set animation ff 0`
-3. **Execução:** Fique posicionado exatamente em cima do bloco inicial da estrutura que quer preencher e digite o seguinte comando:
+O algoritmo é executado de forma totalmente interativa utilizando uma **ferramenta própria** dentro do jogo, sem a necessidade de digitar comandos no chat.
+
+1. **Obter a Ferramenta:** Ao entrar no mundo (ou usar `/reload`), os jogadores recebem a ferramenta automaticamente se não possuírem uma. Se precisar dela novamente, use:
    ```mcfunction
-   /execute positioned ~ ~-1 ~ run function ff:algorithm/init
+   /function ff:tool/give
    ```
-4. O algoritmo executará, substituindo os blocos de forma animada e mostrando visualmente a ordem de preenchimento.
+2. **Executar o Preenchimento:**
+   * Coloque a ferramenta **Floodfill** na sua **Mão Secundária**.
+   * Segure na **Mão Principal** o bloco que deseja usar para o preenchimento (ou o item `structure_void` caso queira substituir os blocos por ar).
+   * Olhe para o bloco inicial que deseja substituir e clique com o botão direito.
+3. **Configurações:**
+   * **Agache (Shift)** e **use a ferramenta** para abrir o menu de configurações interativo diretamente na tela.
+   * Nele, você pode habilitar ou desabilitar as **Marcações de Passos** e a **Animação** de forma visual.
 
 </details>
 
