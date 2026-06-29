@@ -1,2 +1,3 @@
-execute unless items entity @a weapon.offhand jigsaw[custom_data~{ff:true}] run return run kill 0-0-0-0-1
-execute as @a if items entity @s weapon.offhand jigsaw[custom_data~{ff:true}] at @s anchored eyes positioned ^ ^ ^2 align xyz run function ff:tool/select
+execute as @a if items entity @s weapon.offhand jigsaw[custom_data~{ff:true}] at @s anchored eyes positioned ^ ^ ^2 align xyz run return run function ff:tool/select
+
+kill 0-0-0-0-1

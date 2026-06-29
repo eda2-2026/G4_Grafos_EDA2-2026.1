@@ -13,3 +13,6 @@ kill @e[type=text_display,tag=bfs_display]
 kill @e[type=marker,tag=bfs_node]
 kill @e[type=marker,tag=bfs_path_node]
 kill @e[type=block_display,tag=bfs_block]
+
+# Limpa as marcações do Floodfill
+function ff:display/clear_markings

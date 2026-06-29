@@ -1,30 +1,30 @@
 # Elimina marcações anteriores
-function ff:display/kill_markings
+function ff:display/clear_markings
 
 # Interpreta e aplica as configurações
 function ff:tool/apply_configs
 
 # Remove os dados do storage
-data remove storage ff a
-data remove storage ff b
+data remove storage ff novo
+data remove storage ff original
 
 # Salva o novo bloco na storage
-data modify storage ff a set from entity @s SelectedItem.id
+data modify storage ff novo set from entity @s SelectedItem.id
 
 # Obtém o bloco original
 function ff:util/get_block
 
 # Remove namespace "minecraft:" do id
-data modify storage ff a set string storage ff a 10
-data modify storage ff b set string storage ff b 10
+data modify storage ff novo set string storage ff novo 10
+data modify storage ff original set string storage ff original 10
 
-# Mensagens de erro
-execute unless data storage ff a run return run tellraw @s {"text":"Segure um bloco para substituir","color":"red"}
-execute unless function ff:util/compare_strings run return run tellraw @s {"text":"Os blocos devem ser diferentes","color":"red"}
-execute if data storage ff {b:"air"} run return run tellraw @s {"text":"Se posicione em cima de um bloco","color":"red"}
+# Tratamento de erros
+execute unless data storage ff novo run return fail
+execute unless function ff:util/compare_strings run return fail
+execute if data storage ff {original:"air"} run return fail
 
 # Caso especial: preencher com ar
-execute if data storage ff {a:"structure_void"} run data modify storage ff a set value air
+execute if data storage ff {novo:"structure_void"} run data modify storage ff novo set value air
 
 # Inicia o floodfill
 function ff:algorithm/floodfill with storage ff

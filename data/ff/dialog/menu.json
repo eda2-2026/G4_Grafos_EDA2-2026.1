@@ -16,7 +16,7 @@
         {
             "type": "minecraft:boolean",
             "key": "animation",
-            "label": "Animar",
+            "label": "Habilitar animação",
             "on_true": "1",
             "on_false": "0"
         }

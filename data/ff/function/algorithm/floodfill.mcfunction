@@ -1,11 +1,11 @@
 # Se o bloco for diferente do original, retorna
-$execute unless block ~ ~ ~ $(b) run return fail
+$execute unless block ~ ~ ~ $(original) run return fail
 
 # Adiciona uma marcação
 function ff:display/spawn_marking
 
 # Substitui pelo novo bloco
-$setblock ~ ~ ~ $(a) strict
+$setblock ~ ~ ~ $(novo) strict
 
 # Se posiciona a leste e executa a função recursivamente
 execute positioned ~1 ~ ~ run function ff:algorithm/floodfill with storage ff

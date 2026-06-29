@@ -5,7 +5,7 @@ summon item_display ~ ~ ~ {UUID:[I;0,0,0,0]}
 loot replace entity 0-0-0-0-0 contents loot blockstate:get
 
 # Salva o bloco original na storage
-data modify storage ff b set from entity 0-0-0-0-0 item.components."minecraft:custom_data".Name
+data modify storage ff original set from entity 0-0-0-0-0 item.components."minecraft:custom_data".Name
 
 # Mata a entity auxiliar
 kill 0-0-0-0-0
