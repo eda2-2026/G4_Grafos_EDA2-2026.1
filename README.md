@@ -47,13 +47,13 @@ O objetivo deste algoritmo é implementar o clássico **Flood Fill** (Preenchime
 
 O algoritmo é executado de forma totalmente interativa utilizando uma **ferramenta própria** dentro do jogo, sem a necessidade de digitar comandos no chat.
 
-1. **Obter a Ferramenta:** Ao entrar no mundo (ou usar `/reload`), os jogadores recebem a ferramenta automaticamente se não possuírem uma. Se precisar dela novamente, use:
+1. **Obter a Ferramenta:** A ferramenta deve ser entregue automaticamente ao carregar o mundo. Caso não a receba, use o comando:
    ```mcfunction
    /function ff:tool/give
    ```
 2. **Executar o Preenchimento:**
    * Coloque a ferramenta **Floodfill** na sua **Mão Secundária**.
-   * Segure na **Mão Principal** o bloco que deseja usar para o preenchimento (ou o item `structure_void` caso queira substituir os blocos por ar).
+   * Segure o bloco que deseja usar para o preenchimento (ou o item `structure_void` caso queira substituir os blocos por ar) na sua **Mão Principal**.
    * Olhe para o bloco inicial que deseja substituir e clique com o botão direito.
 3. **Configurações:**
    * **Agache (Shift)** e **use a ferramenta** para abrir o menu de configurações interativo diretamente na tela.
