@@ -5,7 +5,7 @@ scoreboard players set global bfs_found 0
 scoreboard players set global bfs_dist 0
 scoreboard players set global bfs_target_index 0
 
-# 2. Mata todos os marcadores, textos e aldeões de chamadas anteriores.
+# 2. Mata todos os marcadores, textos e blocos de chamadas anteriores.
 kill @e[type=marker,tag=bfs_node]
 kill @e[type=marker,tag=bfs_path_node]
 kill @e[type=text_display,tag=bfs_display]

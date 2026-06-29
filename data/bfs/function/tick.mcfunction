@@ -1,15 +1,15 @@
-# Este arquivo roda a cada frame (tick) para todos os aldeões bfs_block
+# Este arquivo roda a cada frame (tick) para o bloco bfs_block
 
 # 1. Limpa o target antigo de todos os nós
 tag @e[type=marker,tag=bfs_path_node] remove bfs_target
 
-# 2. Marca o nó atual que tem o índice igual ao target_index do aldeão
+# 2. Marca o nó atual que tem o índice igual ao target_index do bloco
 execute as @e[type=marker,tag=bfs_path_node] if score @s bfs_path_index = global bfs_target_index run tag @s add bfs_target
 
-# 3. O aldeão olha para o target e dá um passinho pra frente (0.15 blocos)
+# 3. O bloco olha para o target e dá um passinho pra frente (0.15 blocos)
 execute as @e[type=block_display,tag=bfs_block] at @s facing entity @e[type=marker,tag=bfs_target,limit=1] feet run tp @s ^ ^ ^0.2
 
-# 4. Checa se o aldeão chegou muito perto do target
+# 4. Checa se o bloco chegou muito perto do target
 # Salva a missão atual (o número do nó) na macro
 execute as @e[type=block_display,tag=bfs_block] at @s if entity @e[type=marker,tag=bfs_target,distance=..0.3] store result storage bfs:macro dist int 1 run scoreboard players get global bfs_target_index
 

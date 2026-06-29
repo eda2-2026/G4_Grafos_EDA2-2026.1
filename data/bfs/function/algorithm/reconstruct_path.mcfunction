@@ -5,8 +5,8 @@
 # ==============================================================================
 
 # 1. RASTREAMENTO DO CAMINHO (MIGALHAS DE PÃO)
-# Invoca um nó de caminho (bfs_path_node) que servirá de guia para a IA do Aldeão.
-# Atribuímos a ele um índice decrescente para que o Aldeão saiba a ordem exata dos passos.
+# Invoca um nó de caminho (bfs_path_node) que servirá de guia para a IA do Bloco.
+# Atribuímos a ele um índice decrescente para que o Bloco saiba a ordem exata dos passos.
 summon marker ~ ~ ~ {Tags:["bfs_path_node"]}
 execute as @e[type=marker,tag=bfs_path_node,distance=..0.1,limit=1] run scoreboard players operation @s bfs_path_index = global bfs_path_index
 scoreboard players remove global bfs_path_index 1
@@ -42,5 +42,5 @@ execute if entity @s[tag=parent_4] positioned ~ ~ ~1 as @e[type=marker,tag=bfs_n
 
 # 4. CONDIÇÃO DE PARADA (RAIZ DO GRAFO)
 # Se o nó atual não possui nenhuma tag de parentesco, significa que chegamos na Semente Inicial.
-# O caminho ótimo foi 100% traçado! Invocamos o Aldeão para percorrê-lo.
+# O caminho ótimo foi 100% traçado! Invocamos o Bloco para percorrê-lo.
 execute if score global cfg_block matches 1 unless entity @s[tag=parent_1] unless entity @s[tag=parent_2] unless entity @s[tag=parent_3] unless entity @s[tag=parent_4] run function bfs:algorithm/summon_block

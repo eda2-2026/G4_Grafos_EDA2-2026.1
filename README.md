@@ -77,7 +77,7 @@ O objetivo deste algoritmo é demonstrar o funcionamento da **Busca em Largura (
   * 🟥 **Vermelho:** "Becos sem saída" (dead ends) que falharam em expandir.
   * 🟨 **Amarelo:** Os nós que compõem o caminho mais curto reconstruído.
   * 🟩 **Verde:** Os blocos ativamente pisados e validados pelo Agente de Navegação.
-* **Agente de Navegação (NPC):** Após encontrar a solução, um Aldeão atua como ator passivo e percorre fisicamente o grafo (labirinto), caminhando nó por nó sobre a rota ótima até o alvo, simulando a aplicação real em navegação robótica/GPS.
+* **Agente de Navegação (NPC):** Após encontrar a solução, um Bloco de Diamante atua como ator passivo e percorre fisicamente o grafo (labirinto), caminhando nó por nó sobre a rota ótima até o alvo, simulando a aplicação real em navegação robótica/GPS.
 
 ## Como Configurar e Executar
 
@@ -86,7 +86,7 @@ O objetivo deste algoritmo é demonstrar o funcionamento da **Busca em Largura (
    * **Sistema Visual de Status (Números e Cores):** (Padrão: Ligado)
      * Desligar: `/scoreboard players set global cfg_numbers 0`
      * Ligar: `/scoreboard players set global cfg_numbers 1`
-   * **Agente de Navegação (Aldeão):** (Padrão: Ligado)
+   * **Agente de Navegação (Bloco):** (Padrão: Ligado)
      * Desligar: `/scoreboard players set global cfg_villager 0`
      * Ligar: `/scoreboard players set global cfg_villager 1`
 3. **Execução:** Fique posicionado exatamente em cima da Lã Branca onde você quer que a busca comece (Nó Semente) e digite:
@@ -94,7 +94,7 @@ O objetivo deste algoritmo é demonstrar o funcionamento da **Busca em Largura (
    /function bfs:algorithm/start
    ```
 
-4. Acompanhe visualmente a onda expandindo, a árvore de falhas vermelha sendo desenhada e o Aldeão resolvendo o labirinto sobre a trilha amarela!
+4. Acompanhe visualmente a onda expandindo, a árvore de falhas vermelha sendo desenhada e o Bloco resolvendo o labirinto sobre a trilha amarela!
 5. **Limpeza:** Para apagar os números e cores do labirinto após a execução, digite `/function bfs:clear`.
 
 </details>

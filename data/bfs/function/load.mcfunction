@@ -14,7 +14,7 @@ scoreboard objectives add bfs_dist dummy
 # bfs_path_index: Usada no Backtrack. Dá um número de ordem para cada bloco rosa (migalha de pão).
 scoreboard objectives add bfs_path_index dummy
 
-# bfs_target_index: Usada pela IA do Aldeão. Diz para qual "migalha de pão" ele deve olhar e andar.
+# bfs_target_index: Usada pela IA do Bloco. Diz para qual "migalha de pão" ele deve olhar e andar.
 scoreboard objectives add bfs_target_index dummy
 
 
