@@ -18,12 +18,12 @@ scoreboard objectives add bfs_path_index dummy
 scoreboard objectives add bfs_target_index dummy
 
 
-# Configurações do BFS - Define On/Off para os villagers ou os números
+# Configurações do BFS - Define On/Off para os blocks ou os números
 
 scoreboard objectives add cfg_numbers dummy
-scoreboard objectives add cfg_villager dummy
+scoreboard objectives add cfg_block dummy
 
-# Opção Padrão - Villager ativo, Números(Ondas) Ligados
+# Opção Padrão - block ativo, Números(Ondas) Ligados
 
 scoreboard players set global cfg_numbers 1
-scoreboard players set global cfg_villager 1
+scoreboard players set global cfg_block 1

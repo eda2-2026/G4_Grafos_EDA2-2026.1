@@ -18,12 +18,6 @@ O projeto utiliza a seguinte dependência inclusa (Não precisa instalar):
 2. Mova a pasta do datapack (este repositório) para dentro do diretório `datapacks/`.
 3. Entre no mundo. Caso já estiver nele, envie o comando `/reload` no chat.
 
-### 🧹 Limpeza Global de Tela (Clear)
-Tanto o algoritmo de BFS quanto o Flood Fill geram representações visuais na tela (como números flutuantes e marcadores invisíveis). Para apagar e resetar completamente a visualização do mundo entre uma execução e outra, execute no chat:
-```mcfunction
-/function bfs:clear
-```
-
 ---
 
 ## 📚 Algoritmos Implementados
@@ -94,7 +88,7 @@ O objetivo deste algoritmo é demonstrar o funcionamento da **Busca em Largura (
    ```
 
 4. Acompanhe visualmente a onda expandindo, a árvore de falhas vermelha sendo desenhada e o Aldeão resolvendo o labirinto sobre a trilha amarela!
-5. **Limpeza:** Para apagar os números e cores do labirinto antes de iniciar uma nova busca, digite `/function bfs:clear`.
+5. **Limpeza:** Para apagar os números e cores do labirinto após a execução, digite `/function bfs:clear`.
 
 </details>
 

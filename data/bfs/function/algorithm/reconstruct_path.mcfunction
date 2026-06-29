@@ -43,4 +43,4 @@ execute if entity @s[tag=parent_4] positioned ~ ~ ~1 as @e[type=marker,tag=bfs_n
 # 4. CONDIÇÃO DE PARADA (RAIZ DO GRAFO)
 # Se o nó atual não possui nenhuma tag de parentesco, significa que chegamos na Semente Inicial.
 # O caminho ótimo foi 100% traçado! Invocamos o Aldeão para percorrê-lo.
-execute if score global cfg_villager matches 1 unless entity @s[tag=parent_1] unless entity @s[tag=parent_2] unless entity @s[tag=parent_3] unless entity @s[tag=parent_4] run function bfs:algorithm/summon_villager
+execute if score global cfg_block matches 1 unless entity @s[tag=parent_1] unless entity @s[tag=parent_2] unless entity @s[tag=parent_3] unless entity @s[tag=parent_4] run function bfs:algorithm/summon_block

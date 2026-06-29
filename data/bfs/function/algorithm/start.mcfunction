@@ -9,7 +9,7 @@ scoreboard players set global bfs_target_index 0
 kill @e[type=marker,tag=bfs_node]
 kill @e[type=marker,tag=bfs_path_node]
 kill @e[type=text_display,tag=bfs_display]
-kill @e[type=villager,tag=bfs_villager]
+kill @e[type=block_display,tag=bfs_block]
 
 # 3. Invoca o(s) marcador(es) inicial(is). 
 # Usamos "align xyz positioned ~0.5 ~-1 ~0.5" para cravar o marcador EXATAMENTE no centro matemático do bloco do chão.

@@ -1,1 +1,1 @@
-$summon text_display ~ ~0.7 ~ {Tags:["bfs_display"], text:{text:"$(dist)", color:"white"}, billboard:"center", see_through:1b}
+$summon text_display ~ ~0.7 ~ {Tags:["bfs_display"], text:{text:"$(dist)", color:"white"}, billboard:"vertical", see_through:0b,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[-1f,0f,0f,1f],translation:[0f,0.35f,0f],scale:[1f,1f,1f]},brightness:{sky:15,block:15}}
