@@ -1,0 +1,4 @@
+clear @s jigsaw[custom_data~{ff:true}]
+
+give @s jigsaw[custom_data={ff:true},consumable={consume_seconds:0.05,sound:"intentionally_empty",has_consume_particles:false,animation:"none"},item_model="bucket",enchantment_glint_override=true,item_name="Floodfill",attribute_modifiers=[{type:"block_interaction_range",amount:-1,operation:"add_multiplied_total",slot:"hand",id:'ff:tool'}],use_cooldown={seconds:0.5,cooldown_group:"tool"},use_remainder=\
+{id:jigsaw,count:1,components:{custom_data:{ff:true,replenish:true},consumable:{consume_seconds:0.05,sound:"intentionally_empty",has_consume_particles:false,animation:"none"},item_model:"bucket",enchantment_glint_override:true,item_name:"Floodfill",attribute_modifiers:[{type:"block_interaction_range",amount:-1,operation:"add_multiplied_total",slot:"hand",id:'ff:tool'}],use_cooldown:{seconds:0.5,cooldown_group:"tool"}}}] 1

@@ -1,6 +1,7 @@
 {
     "values": [
         "ff:display/animation_loop",
+        "ff:tool/looking_loop",
         "bfs:tick"
     ]
 }

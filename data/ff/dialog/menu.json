@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:multi_action",
+    "title": "Floodfill",
+    "body": {
+        "type": "minecraft:plain_message",
+        "contents": "Configurações"
+    },
+    "inputs": [
+        {
+            "type": "minecraft:boolean",
+            "key": "markings",
+            "label": "Mostrar marcações de passos",
+            "on_true": "1",
+            "on_false": "0"
+        },
+        {
+            "type": "minecraft:boolean",
+            "key": "animation",
+            "label": "Animar",
+            "on_true": "1",
+            "on_false": "0"
+        }
+    ],
+    "actions": [
+        {
+            "label": "Concluído",
+            "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "trigger ff.config set $(markings)$(animation)"
+            }
+        }
+    ]
+}

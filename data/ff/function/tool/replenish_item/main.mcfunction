@@ -1,0 +1,2 @@
+execute as @a if items entity @s weapon.mainhand *[custom_data~{replenish:true}] run function ff:tool/replenish_item/copy_mainhand
+execute as @a if items entity @s weapon.offhand *[custom_data~{replenish:true}] run function ff:tool/replenish_item/copy_offhand
