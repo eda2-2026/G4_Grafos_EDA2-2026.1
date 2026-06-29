@@ -4,7 +4,6 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "items": "minecraft:jigsaw",
           "predicates": {
             "minecraft:custom_data": "{ff:true}"
           }
