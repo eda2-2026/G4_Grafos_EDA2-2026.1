@@ -1,5 +1,6 @@
 {
     "values": [
-        "ff:display/animation_loop"
+        "ff:display/animation_loop",
+        "bfs:tick"
     ]
 }

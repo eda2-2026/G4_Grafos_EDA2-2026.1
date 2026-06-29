@@ -1,5 +1,6 @@
 {
     "values": [
-        "ff:load"
+        "ff:load",
+        "bfs:load"
     ]
 }
