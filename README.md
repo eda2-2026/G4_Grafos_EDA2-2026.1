@@ -101,6 +101,13 @@ O objetivo deste algoritmo é demonstrar o funcionamento da **Busca em Largura (
 
 ---
 
+## 🎥 Demonstração Visual
+
+**Assista ao nosso vídeo de demonstração no YouTube:** [![Vídeo de Demonstração](https://img.youtube.com/vi/ULfceXAp8yM/maxresdefault.jpg)](https://www.youtube.com/watch?v=ULfceXAp8yM)
+
+
+---
+
 ## Equipe de Desenvolvimento
 
 | <img src="docs/assets/fotos/Davi-UnB.png" width="120px;" alt="Davi Freitas"/><br />**Davi Freitas** | <img src="docs/assets/fotos/Mateus0xC.png" width="120px;" alt="Mateus Barreto"/><br />**Mateus Barreto** |
