@@ -106,10 +106,10 @@ O objetivo deste algoritmo é demonstrar o funcionamento da **Busca em Largura (
 **Assista ao nosso vídeo de demonstração no YouTube:** [![Vídeo de Demonstração](https://img.youtube.com/vi/ULfceXAp8yM/maxresdefault.jpg)](https://www.youtube.com/watch?v=ULfceXAp8yM)
 
 ### Flood Fill
-<img src="media/ff1.gif" width="48%" /> <img src="media/ff2.gif" width="48%" />
+<img src="docs/assets/gifs/ff1.gif" width="48%" /> <img src="docs/assets/gifs/ff2.gif" width="48%" />
 
 ### Busca em Largura (BFS)
-<img src="media/bfs1.gif" width="48%" /> <img src="media/bfs2.gif" width="48%" />
+<img src="docs/assets/gifs/bfs1.gif" width="48%" /> <img src="docs/assets/gifs/bfs2.gif" width="48%" />
 
 ---
 
